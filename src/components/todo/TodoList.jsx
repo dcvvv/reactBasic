@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { CheckList } from "./CheckList";
 
 export const TodoList = () => {
   const [isCheck, setIsCheck] = useState(false);
@@ -39,6 +40,10 @@ export const TodoList = () => {
           onChange={(e) => handleInput(e.target.value, "value 2")}
           type="text"
         ></input>
+      </div>
+
+      <div style={{ display: "flex", flexDirection: "column" }}>
+        <CheckList noteValue={notes}></CheckList>
       </div>
     </div>
   );
